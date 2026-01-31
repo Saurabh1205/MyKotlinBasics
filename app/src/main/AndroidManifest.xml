@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".dagger2_example.UserApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,8 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyKotlinBasics">
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+            android:name=".jetpack_archi_compo.viewmodel.QuoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jetpack_archi_compo.livedata.LiveDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dagger2_example.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jetpack_archi_compo.lifecycle_observer.MainActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".jetpack_archi_compo.room_db.RoomActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
