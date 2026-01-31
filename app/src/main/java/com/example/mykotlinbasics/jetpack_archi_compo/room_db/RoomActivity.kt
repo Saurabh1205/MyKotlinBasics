@@ -13,6 +13,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.Date
 
 class RoomActivity : AppCompatActivity() {
     lateinit var database: ContactDatabase
@@ -30,7 +31,7 @@ class RoomActivity : AppCompatActivity() {
         var database2 = ContactDatabase.getDatabase(this)
 
         GlobalScope.launch{
-            database.contactDao().insertContact(Contact(0, "John", "9999999999"))
+            database.contactDao().insertContact(Contact(0, "John", "9999999999", Date()))
         }
     }
 
